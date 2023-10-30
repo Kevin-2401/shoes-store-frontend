@@ -22,7 +22,7 @@ const Cart = () => {
         try {
             setLoading(true);
             const stripe = await stripePromise;
-            const res = await makePaymentRequest("/api/order", {
+            const res = await makePaymentRequest("/api/orders", {
                 products: cartItems,
             });
             await stripe.redirectToCheckout({
