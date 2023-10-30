@@ -26,7 +26,7 @@ const Cart = () => {
                 products: cartItems,
             });
             await stripe.redirectToCheckout({
-                sessionId: res.stripeSession.id,
+                sessionId: res.stripeSession.Id,
             });
         } catch (error) {
             setLoading(false);
